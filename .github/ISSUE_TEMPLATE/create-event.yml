@@ -1,5 +1,5 @@
 name: Create event
-about: Publish a structured event that will appear automatically on the GitHub Pages planner.
+description: Publish a structured event that will appear automatically on the GitHub Pages planner.
 title: "Event: "
 labels:
   - event
