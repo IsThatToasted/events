@@ -1,26 +1,47 @@
 {
-  "generatedAt": "2026-03-08T23:27:30.356Z",
+  "generatedAt": "2026-03-08T23:39:15.997Z",
   "repo": {
     "owner": "IsThatToasted",
     "name": "events"
   },
   "events": [
     {
+      "issueNumber": 4,
+      "issueUrl": "https://github.com/IsThatToasted/events/issues/4",
+      "issueCreatedAt": "2026-03-08T23:39:07Z",
+      "title": "Conveyor Sushi @ Shinjuku",
+      "slug": "conveyor-sushi-shinjuku",
+      "category": "Social",
+      "startDate": "03/14/2026",
+      "endDate": "03/14/2026",
+      "location": "4263 Union Deposit Rd, Harrisburg, PA 17111",
+      "coverImage": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqY0NuLO4PQpVI0sH8G-LB-CKkloPDrWmeFa2mu-EMjuef1bBHw2nCiBaSe1NEpNVcjDui1di12qwNzuSrS-ImQmV9_dV6bmq0ynNt6reNL3TMic1bnrtQZosbjggYDF48IjhxP2LLWL1w=s680-w680-h510-rw",
+      "capacity": "",
+      "organizer": "Friends",
+      "registrationCloses": "03/12/2026",
+      "tags": [
+        "Food"
+      ],
+      "description": "Sushi with the friends!"
+    },
+    {
       "issueNumber": 3,
       "issueUrl": "https://github.com/IsThatToasted/events/issues/3",
       "issueCreatedAt": "2026-03-08T23:27:22Z",
       "title": "Electric Forest",
       "slug": "electric-forest",
-      "category": "Other",
+      "category": "Social",
       "startDate": "06/25/2026",
       "endDate": "06/28/2026",
-      "location": "Location TBD",
-      "coverImage": "",
+      "location": "Double JJ Resort, 7100 South Water Road, Rothbury, Michigan 49437",
+      "coverImage": "https://images.discovery-prod.axs.com/2025/12/electric-forest-2026-tickets_06-25-26_17_692dcd2b688aa.jpg",
       "capacity": "",
-      "organizer": "Organizer TBD",
-      "registrationCloses": "",
-      "tags": [],
-      "description": "No description provided yet."
+      "organizer": "Friends",
+      "registrationCloses": "06/01/2026",
+      "tags": [
+        "Festival"
+      ],
+      "description": "$600 per general admission, plan on getting a hotel or pay $150 for car camping."
     },
     {
       "issueNumber": 2,
@@ -28,16 +49,18 @@
       "issueCreatedAt": "2026-03-08T22:19:46Z",
       "title": "Electric Forest",
       "slug": "electric-forest",
-      "category": "Other",
-      "startDate": "",
-      "endDate": "",
-      "location": "Location TBD",
-      "coverImage": "",
+      "category": "Social",
+      "startDate": "06/25/2026",
+      "endDate": "06/28/2026",
+      "location": "Best Western Premier The Central Hotel & Conference Center",
+      "coverImage": "https://images.discovery-prod.axs.com/2025/12/electric-forest-2026-tickets_06-25-26_17_692dcd2b688aa.jpg",
       "capacity": "",
-      "organizer": "Organizer TBD",
-      "registrationCloses": "",
-      "tags": [],
-      "description": "No description provided yet."
+      "organizer": "Friends",
+      "registrationCloses": "06/01/2026",
+      "tags": [
+        "Festival"
+      ],
+      "description": "My main event of the year, $600 for general admission, $150 for car camping if required. If not set up hotels."
     }
   ],
   "rsvps": []
