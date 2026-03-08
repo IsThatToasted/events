@@ -1,47 +1,47 @@
-name: RSVP
-description: Submit a structured RSVP for an existing event.
+name: "RSVP"
+description: "Submit a structured RSVP for an existing event."
 title: "RSVP: "
-labels:
-  - rsvp
+labels: ["rsvp"]
+
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form to RSVP for an event published in the planner. Make sure the Event ID matches the event exactly.
+        Use this form to RSVP for an existing event. Make sure the Event ID matches the event exactly.
 
   - type: input
     id: event_id
     attributes:
-      label: Event ID
-      description: Copy the Event ID from the event card or event modal.
-      placeholder: spring-design-summit-2026
+      label: "Event ID"
+      description: "Copy the Event ID from the event card or event modal."
+      placeholder: "spring-design-summit-2026"
     validations:
       required: true
 
   - type: input
     id: attendee_name
     attributes:
-      label: Attendee name
-      placeholder: Alex Morgan
+      label: "Attendee name"
+      placeholder: "Alex Morgan"
     validations:
       required: true
 
   - type: dropdown
     id: attendance_status
     attributes:
-      label: Attendance status
+      label: "Attendance status"
       options:
-        - Yes, attending
-        - Maybe
-        - No, cannot attend
+        - "Yes, attending"
+        - "Maybe"
+        - "No, cannot attend"
     validations:
       required: true
 
   - type: input
     id: guest_count
     attributes:
-      label: Guest count
-      description: Include yourself in the count.
+      label: "Guest count"
+      description: "Include yourself in the count."
       placeholder: "1"
     validations:
       required: true
@@ -49,16 +49,16 @@ body:
   - type: textarea
     id: notes
     attributes:
-      label: Notes
-      description: Accessibility requests, dietary restrictions, plus-one names, arrival updates, or anything else the organizer should know.
-      placeholder: Vegetarian meal requested.
+      label: "Notes"
+      description: "Accessibility requests, dietary restrictions, plus-one names, arrival updates, or anything else the organizer should know."
+      placeholder: "Vegetarian meal requested."
     validations:
       required: false
 
   - type: checkboxes
     id: consent
     attributes:
-      label: Confirmation
+      label: "Confirmation"
       options:
-        - label: I understand this RSVP will be stored publicly as a GitHub issue.
+        - label: "I understand this RSVP will be stored publicly as a GitHub issue."
           required: true
