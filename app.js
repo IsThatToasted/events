@@ -1,6 +1,6 @@
 const GITHUB_CONFIG = {
-  owner: "your-github-username-or-org",
-  repo: "your-repository-name",
+  owner: "IsThatToasted",
+  repo: "events",
   eventLabel: "event",
   rsvpLabel: "rsvp"
 };
