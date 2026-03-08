@@ -1,50 +1,50 @@
 # PulsePlan
 
-PulsePlan is a static GitHub Pages event planner that uses public GitHub Issues as its data layer.
+PulsePlan is a static GitHub Pages event planner with a modern calendar UI, native date-picker modals, GitHub YAML issue forms, and public GitHub Issues as the data source.
 
-## What it includes
+## What changed in this version
 
-- A modern event dashboard built with plain HTML, CSS, and JavaScript
-- GitHub YAML issue forms for:
-  - creating events
-  - RSVPing to events
-- A polished RSVP modal with two paths:
-  - open the official YAML RSVP form
-  - generate a quick prefilled issue from the site
-- A lightweight GitHub Actions workflow that comments on malformed event or RSVP issues
-
-## Repository structure
-
-- `index.html` — app shell and modal markup
-- `styles.css` — unique modern visual system
-- `app.js` — GitHub Issues API integration, parsing, filters, and RSVP modal logic
-- `.github/ISSUE_TEMPLATE/create-event.yml` — structured event creation form
-- `.github/ISSUE_TEMPLATE/rsvp.yml` — structured RSVP form
-- `.github/ISSUE_TEMPLATE/config.yml` — issue template chooser config
-- `.github/workflows/issue-hygiene.yml` — validation helper comments
+- Calendar-first dashboard with month view and day agenda
+- Event studio modal with native browser date pickers
+- Event issue output normalized to `MM/DD/YYYY`
+- YAML issue forms fixed to avoid GitHub parser errors
+- RSVP quick modal plus YAML fallback
+- Event parser supports both `MM/DD/YYYY` and `YYYY-MM-DD`
+- `data/events.json` cache for fast loading and fewer API-rate-limit problems
+- GitHub Actions workflow that rebuilds `data/events.json` whenever event or RSVP issues change
 
 ## Setup
 
-1. Create a GitHub repository.
+1. Create a public GitHub repository.
 2. Copy this project into the repository root.
 3. Edit `GITHUB_CONFIG` in `app.js`.
-4. Create labels named `event` and `rsvp` in the repository.
-5. Enable Issues for the repository.
-6. Enable GitHub Pages from the root of your default branch.
+4. Create labels named `event` and `rsvp`.
+5. Keep GitHub Actions enabled so `data/events.json` updates automatically.
+6. Enable Issues for the repo.
+7. Enable GitHub Pages from the repository root on your default branch.
 
-## How the data flow works
+## How event creation works
 
-1. A maintainer creates an event through the YAML issue form.
-2. The issue gets the `event` label.
-3. The site fetches issues from the GitHub Issues REST API and parses the form-generated markdown.
-4. Visitors browse events on the GitHub Pages site.
-5. Visitors RSVP either through:
-   - the YAML RSVP form, or
-   - the quick RSVP modal that opens a prefilled issue composer with the `rsvp` label.
-6. RSVP issues are counted and associated with events using `Event ID`.
+- The **site modal** uses real date pickers and opens a prefilled GitHub issue.
+- The **YAML issue form** remains available as a fallback for maintainers.
+- The planner reads event fields from issue headings such as `### Event name` and `### Start date`.
 
-## Notes
+## File map
 
-- This site works best with a public repository because the browser fetches public issues directly from the GitHub API.
-- The quick RSVP modal opens a new GitHub issue instead of posting silently, because a static GitHub Pages site does not have a secure backend for authenticated issue creation.
-- If you want true one-click RSVP submission, pair this UI with a GitHub App, serverless function, or OAuth flow.
+- `index.html` — app shell, calendar layout, and modals
+- `styles.css` — visual design system
+- `app.js` — GitHub Issues API integration, calendar rendering, parsing, filtering, and RSVP flow
+- `.github/ISSUE_TEMPLATE/create-event.yml` — fixed event issue form
+- `.github/ISSUE_TEMPLATE/rsvp.yml` — fixed RSVP issue form
+- `.github/workflows/issue-hygiene.yml` — optional helper comment workflow
+
+## Important note about date pickers
+
+GitHub Issue Forms do not provide a native date-picker field. This project solves that by using the site modal for a polished date-picker UX and the YAML form as a fallback.
+
+
+## events.json cache
+
+PulsePlan now tries to load `data/events.json` first for faster page loads and more reliable public rendering. If that file is not available yet, it falls back to the public GitHub Issues API.
+
+The included workflow `.github/workflows/generate-events-json.yml` rebuilds the file whenever relevant issues change.
