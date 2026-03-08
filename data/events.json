@@ -1,10 +1,29 @@
 {
-  "generatedAt": "2026-03-08T23:39:15.997Z",
+  "generatedAt": "2026-03-08T23:43:20.901Z",
   "repo": {
     "owner": "IsThatToasted",
     "name": "events"
   },
   "events": [
+    {
+      "issueNumber": 5,
+      "issueUrl": "https://github.com/IsThatToasted/events/issues/5",
+      "issueCreatedAt": "2026-03-08T23:43:13Z",
+      "title": "Charleston Bluegrass Festival 2026",
+      "slug": "charleston-bluegrass-festival-2026",
+      "category": "Social",
+      "startDate": "03/20/2026",
+      "endDate": "03/21/2026",
+      "location": "Woodlands Nature Reserve in Charleston, SC",
+      "coverImage": "https://www.musicfestivalwizard.com/wp-content/uploads/2025/04/Charleston-Bluegrass-Festival-2026-Lineup-Poster-1600x1999.jpg.webp",
+      "capacity": "",
+      "organizer": "Friends",
+      "registrationCloses": "03/13/2026",
+      "tags": [
+        "Festival"
+      ],
+      "description": "Music Fest"
+    },
     {
       "issueNumber": 4,
       "issueUrl": "https://github.com/IsThatToasted/events/issues/4",
@@ -42,25 +61,6 @@
         "Festival"
       ],
       "description": "$600 per general admission, plan on getting a hotel or pay $150 for car camping."
-    },
-    {
-      "issueNumber": 2,
-      "issueUrl": "https://github.com/IsThatToasted/events/issues/2",
-      "issueCreatedAt": "2026-03-08T22:19:46Z",
-      "title": "Electric Forest",
-      "slug": "electric-forest",
-      "category": "Social",
-      "startDate": "06/25/2026",
-      "endDate": "06/28/2026",
-      "location": "Best Western Premier The Central Hotel & Conference Center",
-      "coverImage": "https://images.discovery-prod.axs.com/2025/12/electric-forest-2026-tickets_06-25-26_17_692dcd2b688aa.jpg",
-      "capacity": "",
-      "organizer": "Friends",
-      "registrationCloses": "06/01/2026",
-      "tags": [
-        "Festival"
-      ],
-      "description": "My main event of the year, $600 for general admission, $150 for car camping if required. If not set up hotels."
     }
   ],
   "rsvps": []
