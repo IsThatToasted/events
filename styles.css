@@ -576,3 +576,41 @@ input::placeholder, textarea::placeholder {
 input[readonly] {
   background: rgba(255,255,255,0.05);
 }
+
+
+/* Display hardening */
+.event-title,
+.event-date,
+.event-meta,
+.event-description,
+.summary-card h3,
+.summary-card h4,
+.summary-card strong,
+.modal-main h2,
+.modal-main h3,
+.modal-main strong,
+.meta-card strong,
+.agenda-item h4,
+.agenda-item strong,
+.calendar-day .day-number,
+.event-card,
+.event-card * {
+  color: var(--text);
+}
+
+.event-description,
+.event-meta,
+.modal-description,
+.meta-card span,
+.agenda-meta,
+.day-count,
+.inline-note {
+  color: var(--muted) !important;
+}
+
+input,
+textarea,
+select,
+option {
+  color: var(--text);
+}

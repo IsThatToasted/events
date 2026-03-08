@@ -48,3 +48,20 @@ GitHub Issue Forms do not provide a native date-picker field. This project solve
 PulsePlan now tries to load `data/events.json` first for faster page loads and more reliable public rendering. If that file is not available yet, it falls back to the public GitHub Issues API.
 
 The included workflow `.github/workflows/generate-events-json.yml` rebuilds the file whenever relevant issues change.
+
+
+## GitHub Action for data/events.json
+
+This project includes `.github/workflows/generate-events-json.yml`.
+
+To make it work:
+
+1. Push the workflow file to your repository's default branch.
+2. Make sure GitHub Actions are enabled for the repository.
+3. Create the `event` and `rsvp` labels.
+4. Open **Actions** and run **Build events.json** once with **Run workflow**.
+5. After that, new event and RSVP issues will automatically update `data/events.json`.
+
+Important:
+- `issues` workflows only trigger from the repository's default branch.
+- The workflow needs `contents: write` so it can commit the refreshed `data/events.json`.
