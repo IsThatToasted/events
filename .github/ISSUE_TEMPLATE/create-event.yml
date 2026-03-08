@@ -1,20 +1,20 @@
 name: Create event
 description: Publish a structured event that will appear automatically on the GitHub Pages planner.
 title: "Event: "
-labels:
-  - event
+labels: ["event"]
+
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for creating a new event. The static event planner reads these fields from the issue body, so keep them accurate and consistent.
+        Thanks for creating a new event. The static event planner reads these fields from the issue body.
 
   - type: input
     id: event_name
     attributes:
       label: Event name
       description: The public event title shown on the site.
-      placeholder: Spring Design Summit
+      placeholder: "Spring Design Summit"
     validations:
       required: true
 
@@ -22,8 +22,8 @@ body:
     id: event_id
     attributes:
       label: Event ID
-      description: A short unique slug, used to match RSVPs to the event.
-      placeholder: spring-design-summit-2026
+      description: A short unique slug used to match RSVPs.
+      placeholder: "spring-design-summit-2026"
     validations:
       required: true
 
@@ -47,8 +47,8 @@ body:
     id: start_date
     attributes:
       label: Start date
-      description: Use an ISO date or date-time such as 2026-04-21 or 2026-04-21 18:30.
-      placeholder: 2026-04-21
+      description: Use ISO format like "2026-04-21".
+      placeholder: "2026-04-21"
     validations:
       required: true
 
@@ -56,8 +56,8 @@ body:
     id: end_date
     attributes:
       label: End date
-      description: Use the same format as the start date. Leave it the same for one-day events.
-      placeholder: 2026-04-21
+      description: Use the same format as start date.
+      placeholder: "2026-04-21"
     validations:
       required: true
 
@@ -66,7 +66,7 @@ body:
     attributes:
       label: Location
       description: City, venue, or meeting URL.
-      placeholder: Brooklyn, NY or https://meet.google.com/...
+      placeholder: "Brooklyn, NY"
     validations:
       required: true
 
@@ -74,8 +74,8 @@ body:
     id: cover_image
     attributes:
       label: Cover image URL
-      description: Public image URL used in cards and modal views.
-      placeholder: https://images.unsplash.com/...
+      description: Public image URL used in cards.
+      placeholder: "https://images.unsplash.com/example"
     validations:
       required: true
 
@@ -85,15 +85,13 @@ body:
       label: Capacity
       description: Optional attendance limit.
       placeholder: "120"
-    validations:
-      required: false
 
   - type: input
     id: organizer
     attributes:
       label: Organizer
-      description: Team, person, or host organization.
-      placeholder: Community Team
+      description: Person, team, or organization.
+      placeholder: "Community Team"
     validations:
       required: true
 
@@ -101,26 +99,22 @@ body:
     id: registration_closes
     attributes:
       label: Registration closes
-      description: Optional last RSVP date.
-      placeholder: 2026-04-18
-    validations:
-      required: false
+      description: Optional RSVP deadline.
+      placeholder: "2026-04-18"
 
   - type: input
     id: tags
     attributes:
       label: Tags
-      description: Comma-separated tags.
-      placeholder: design, community, keynote
-    validations:
-      required: false
+      description: Comma separated tags.
+      placeholder: "design, community, keynote"
 
   - type: textarea
     id: description
     attributes:
       label: Description
-      description: This becomes the main event summary in the planner.
-      placeholder: Share what attendees should expect, what to bring, and why this event matters.
+      description: Main event summary.
+      placeholder: "Describe what attendees should expect."
     validations:
       required: true
 
@@ -129,5 +123,5 @@ body:
     attributes:
       label: Publication checklist
       options:
-        - label: I confirmed the Event ID is unique and the details are ready to be shown publicly.
+        - label: I confirmed the Event ID is unique.
           required: true
