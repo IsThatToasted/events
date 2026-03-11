@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T23:43:20.901Z",
+  "generatedAt": "2026-03-11T00:51:23.923Z",
   "repo": {
     "owner": "IsThatToasted",
     "name": "events"
@@ -63,5 +63,15 @@
       "description": "$600 per general admission, plan on getting a hotel or pay $150 for car camping."
     }
   ],
-  "rsvps": []
+  "rsvps": [
+    {
+      "issueNumber": 6,
+      "issueUrl": "https://github.com/IsThatToasted/events/issues/6",
+      "eventId": "conveyor-sushi-shinjuku",
+      "attendeeName": "Brian Chambers",
+      "attendanceStatus": "Yes, attending",
+      "guestCount": 1,
+      "notes": "None"
+    }
+  ]
 }
